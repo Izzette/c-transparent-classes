@@ -8,6 +8,7 @@
 
 #include <ctc/object.h>
 #include <ctc/method.h>
+#include <ctc/export.h>
 #include <ctc/prepare.h>
 
 #include "sayer.h"
@@ -31,6 +32,7 @@ const struct ctc_iface sayer_iface = {
 	},
 };
 
+CTC_EXPORT_IFACE(sayer_iface);
 CTC_PREP_IFACE_ONLOAD(sayer_iface)
 
 const struct ctc_class sayer_class = {
@@ -43,6 +45,7 @@ const struct ctc_class sayer_class = {
 	},
 };
 
+CTC_EXPORT_CLASS(sayer_class);
 CTC_PREP_CLASS_ONLOAD(sayer_class)
 
 static void sayer_init(ctc_t *this, va_list ap) {

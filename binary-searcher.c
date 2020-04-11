@@ -6,6 +6,7 @@
 #include <ctc/class.h>
 #include <ctc/object.h>
 #include <ctc/method.h>
+#include <ctc/export.h>
 
 #include "binary-searcher.h"
 
@@ -25,6 +26,8 @@ const struct ctc_iface binary_searcher_iface = {
 	},
 };
 
+CTC_EXPORT_IFACE(binary_searcher_iface)
+
 const struct ctc_class binary_searcher_class = {
 	.name = "binary_searcher",
 	.cache = CTC_CLASS_CACHE_INITALIZER,
@@ -37,6 +40,8 @@ const struct ctc_class binary_searcher_class = {
 		NULL,
 	},
 };
+
+CTC_EXPORT_CLASS(binary_searcher_class)
 
 struct binary_searcher *binary_searcher_static = &(struct binary_searcher){
 	.__init__ = binary_searcher_init,

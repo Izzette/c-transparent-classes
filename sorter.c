@@ -4,6 +4,7 @@
 #include <stdarg.h>
 
 #include <ctc/method.h>
+#include <ctc/export.h>
 
 #include "sorter.h"
 
@@ -27,6 +28,8 @@ const struct ctc_iface sorter_iface = {
 	},
 };
 
+CTC_EXPORT_IFACE(sorter_iface)
+
 const struct ctc_class sorter_class = {
 	.name = "sorter",
 	.cache = CTC_CLASS_CACHE_INITALIZER,
@@ -39,6 +42,8 @@ const struct ctc_class sorter_class = {
 		NULL,
 	},
 };
+
+CTC_EXPORT_CLASS(sorter_class)
 
 struct sorter *sorter_static = &(struct sorter){
 	.__init__ = sorter_init,

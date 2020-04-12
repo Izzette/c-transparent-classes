@@ -57,7 +57,7 @@ patterns.
   I'm not sure this is possible, but if it is I expect it would be too
   complicated.
 
-## Check out the [examples](examples/)
+## Check out the [examples](example/)
 
 Included in the examples directory are two examples:
 
